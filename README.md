@@ -7,7 +7,7 @@ An intelligent and autonomous news agent that fetches, analyzes, ranks, summariz
 ## 🚀 Features
 
 - 🔍 **Autonomous News Curation** – Automatically fetches news using NewsAPI.
-- 🧠 **AI Summarization** – Uses Gemini Pro to generate concise summaries.
+- 🧠 **AI Summarization** – Uses Gemini 1.5 Flash to generate concise summaries.
 - 📊 **Ranking Engine** – Ranks articles based on semantic match + recency.
 - 🎯 **User Personalization** – Each user gets their own tailored feed.
 - 💬 **Telegram Integration** – Delivers news via interactive Telegram bot.
@@ -20,7 +20,7 @@ An intelligent and autonomous news agent that fetches, analyzes, ranks, summariz
 
 - Python 3.7+
 - [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
-- [Google Gemini API](https://makersuite.google.com/app)
+- [Gemini 1.5 Flash API](https://makersuite.google.com/app)
 - [NewsAPI](https://newsapi.org)
 - APScheduler (for scheduled tasks)
 - JSON (for storing user preferences)
