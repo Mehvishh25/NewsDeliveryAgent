@@ -12,9 +12,9 @@ from newsapi import NewsApiClient
 import pytz
 
 # === CONFIG ===
-TELEGRAM_TOKEN = "8180028720:AAEVGNP8DaUJzJuodpibeaPVzMEAC7EVNWw"
-GEMINI_API_KEY = "AIzaSyBb0yOnYLBoicKe8SEajKCeMxqqAzneyzI"
-NEWSAPI_KEY = "510a34343fbb4c04bdf0d9fd1bb24a43"
+TELEGRAM_TOKEN = ""
+GEMINI_API_KEY = ""
+NEWSAPI_KEY = ""
 USER_DATA_FILE = "user_data.json"
 ARTICLES_PER_PAGE = 5
 
@@ -32,9 +32,15 @@ scheduler.start()
 # === USER DATA ===
 def load_user_data():
     if os.path.exists(USER_DATA_FILE):
-        with open(USER_DATA_FILE, "r") as f:
-            return json.load(f)
+        try:
+            with open(USER_DATA_FILE, "r") as f:
+                data = f.read().strip()
+                return json.loads(data) if data else {}
+        except json.JSONDecodeError:
+            logging.warning("⚠️ user_data.json is corrupted or empty. Resetting file.")
+            return {}
     return {}
+
 
 def save_user_data(data):
     with open(USER_DATA_FILE, "w") as f:

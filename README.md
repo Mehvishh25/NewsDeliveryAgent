@@ -7,6 +7,7 @@ An intelligent and autonomous news agent that fetches, analyzes, ranks, summariz
 ## 🚀 Features
 
 - 🔍 **Autonomous News Curation** – Automatically fetches news using NewsAPI.
+<<<<<<< HEAD
 - 🧠 **AI Summarization** – Uses Gemini 1.5 Flash to generate concise summaries.
 - 📊 **Ranking Engine** – Ranks articles based on semantic match + recency.
 - 🎯 **User Personalization** – Each user gets their own tailored feed.
